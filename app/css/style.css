@@ -513,6 +513,17 @@ body {
     .navigation form input {
       width: 100%; } }
 
+.copyright {
+  background: #21282a; }
+  .copyright p {
+    margin: 0;
+    color: #b2b2b2;
+    line-height: 52px;
+    font-size: 13px;
+    font-weight: bold; }
+    .copyright p span {
+      color: #2aebcb; }
+
 .footer {
   padding: 50px 0 42px;
   background: #2b373a;
