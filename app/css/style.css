@@ -513,6 +513,106 @@ body {
     .navigation form input {
       width: 100%; } }
 
+.footer {
+  padding: 50px 0 42px;
+  background: #2b373a;
+  color: #fff; }
+  .footer [class*="col-lg-"] {
+    min-height: 300px; }
+  .footer .logotype .social {
+    margin: 0;
+    padding: 0;
+    margin-top: 19px;
+    list-style-type: none; }
+    .footer .logotype .social li {
+      padding: 0;
+      height: 20px;
+      width: 20px;
+      float: left;
+      display: inline-block;
+      margin-right: 19px; }
+      .footer .logotype .social li a {
+        position: relative;
+        top: 0;
+        height: 20px;
+        width: 20px;
+        display: block;
+        background: url(../img/social.png) no-repeat; }
+      .footer .logotype .social li:first-child a {
+        background-position: 4px 1px; }
+      .footer .logotype .social li:nth-child(2) a {
+        background-position: -38px 1px; }
+      .footer .logotype .social li:nth-child(3) a {
+        background-position: -80px 1px; }
+      .footer .logotype .social li:nth-child(4) {
+        margin-right: 0; }
+        .footer .logotype .social li:nth-child(4) a {
+          background-position: -127px 1px; }
+  .footer .logotype .statistic {
+    list-style-type: none;
+    padding: 0; }
+    .footer .logotype .statistic li {
+      font-weight: bold;
+      color: #fff; }
+      .footer .logotype .statistic li span {
+        color: #2aebcb; }
+      .footer .logotype .statistic li img {
+        padding-right: 8px; }
+  .footer .logotype img {
+    float: left; }
+  .footer .logotype p {
+    padding-top: 25px;
+    font-size: 13px;
+    color: #b2b2b2;
+    font-weight: bold; }
+  .footer .logotype a {
+    color: #fff;
+    font-weight: bold; }
+    .footer .logotype a .logoname {
+      padding-top: 7px;
+      padding-left: 9px;
+      overflow: hidden; }
+      .footer .logotype a .logoname span {
+        font-size: 20px;
+        color: #2aebcb; }
+        .footer .logotype a .logoname span span {
+          color: #fff; }
+        .footer .logotype a .logoname span + p {
+          padding-top: 0;
+          font-weight: bold;
+          color: #bdcdd1;
+          font-size: 8px; }
+  .footer .tweet {
+    margin-bottom: 20px;
+    padding-left: 34px;
+    background: url(../img/tweet.png) no-repeat; }
+    .footer .tweet p {
+      font-weight: bold; }
+      .footer .tweet p a {
+        font-weight: bold;
+        color: #2aebcb; }
+      .footer .tweet p + span {
+        color: #b2b2b2;
+        font-size: 12px; }
+  .footer h4 {
+    font-weight: bold;
+    font-size: 20px; }
+  .footer ul {
+    margin-top: 36px;
+    padding-left: 21px; }
+    .footer ul li {
+      padding: 5px 0;
+      color: #2aebcb; }
+      .footer ul li a {
+        font-weight: bold;
+        display: block;
+        font-family: 'Titillium';
+        font-size: 13px;
+        color: #b2b2b2; }
+        .footer ul li a:hover {
+          padding-left: 4px;
+          color: #fff; }
+
 @media (max-width: 767px) {
   .subscribe img {
     margin-left: 0; }

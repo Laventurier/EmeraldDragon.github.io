@@ -616,58 +616,66 @@ body {
     padding: 35px 0;
 
     img {
-      margin-left: 125px;
+        margin-left: 125px;
         float: left;
     }
-    form{
-      margin-top:17px;
-      input{
-        border-top-left-radius: 5px;
-        border-bottom-left-radius: 5px;
-        width: 334px;
-        float: left;
-        height: 42px;
-        padding-left: 18px;
-        border: 1px solid #efefef;
-      }
-      button{
-        background: #2b373a;
-        font-weight: bold;
-        color:#fff;
-        font-size: 14px;
-        border-top-right-radius: 5px;
-        border-bottom-right-radius: 5px;
-        float: left;
-        border:none;
-        height: 42px;
-        width:140px;
-      }
+
+    form {
+        margin-top: 17px;
+
+        input {
+            border-top-left-radius: 5px;
+            border-bottom-left-radius: 5px;
+            width: 334px;
+            float: left;
+            height: 42px;
+            padding-left: 18px;
+            border: 1px solid #efefef;
+        }
+
+        button {
+            background: #2b373a;
+            font-weight: bold;
+            color: #fff;
+            font-size: 14px;
+            border-top-right-radius: 5px;
+            border-bottom-right-radius: 5px;
+            float: left;
+            border: none;
+            height: 42px;
+            width: 140px;
+        }
     }
+
     .text {
         color: #fff;
         overflow: hidden;
         padding-left: 15px;
+
         h3 {
             font-weight: bold;
             margin-top: 15px;
         }
-        span{
-          font-size: 13px;
-          font-weight: bold;
+
+        span {
+            font-size: 13px;
+            font-weight: bold;
         }
     }
 }
 @media (max-width:1199px) {
-  .subscribe {
-    img{
-      margin-left: 50px;
+    .subscribe {
+        img {
+            margin-left: 50px;
+        }
+
+        form {
+            button {
+                width: 120px;
+            }
+        }
     }
-    form{
-      button{
-        width: 120px;
-      }
-    }
-  }
+
     .main-header {
         .container {
             .search-box {
@@ -702,19 +710,22 @@ body {
     }
 }
 @media (min-width:768px) and (max-width:991px) {
-  .subscribe {
-    img{
-      margin-left: 0;
+    .subscribe {
+        img {
+            margin-left: 0;
+        }
+
+        form {
+            input {
+                width: 75%;
+            }
+
+            button {
+                width: 25%;
+            }
+        }
     }
-    form{
-      input{
-        width: 75%;
-      }
-      button{
-        width: 25%;
-      }
-    }
-  }
+
     .main-header {
         .container {
             .search-box {
@@ -759,20 +770,176 @@ body {
         }
     }
 }
+
+.footer {
+    padding: 50px 0 42px;
+    background: #2b373a;
+    color: #fff;
+      [class*="col-lg-"]{
+        min-height: 300px;
+      }
+    .logotype {
+      .social{
+        margin: 0;
+        padding: 0;
+        margin-top:19px;
+        list-style-type: none;
+        li{
+          padding: 0;
+          height: 20px;
+          width:20px;
+          float: left;
+          display: inline-block;
+          margin-right: 19px;
+          a{
+            position: relative;
+            top:0;
+            height: 20px;
+            width: 20px;
+            display: block;
+            background: url(../img/social.png)no-repeat;
+          }
+          &:first-child{
+            a{
+              background-position: 4px 1px;
+            }
+          }
+          &:nth-child(2){
+            a{
+              background-position: -38px 1px;
+            }
+          }
+          &:nth-child(3){
+            a{
+              background-position: -80px 1px;
+            }
+          }
+          &:nth-child(4){
+            margin-right: 0;
+            a{
+              background-position: -127px 1px;
+            }
+          }
+        }
+      }
+      .statistic{
+        list-style-type: none;
+        padding: 0;
+        li{
+          font-weight: bold;
+          color:#fff;
+          span{
+            color:#2aebcb;
+          }
+          img{
+            padding-right: 8px;
+          }
+        }
+      }
+        img {
+            float: left;
+        }
+
+        p {
+            padding-top: 25px;
+            font-size: 13px;
+            color: #b2b2b2;
+            font-weight: bold;
+        }
+
+        a {
+            color: #fff;
+            font-weight: bold;
+
+            .logoname {
+                padding-top: 7px;
+                padding-left: 9px;
+                overflow: hidden;
+
+                span {
+                    font-size: 20px;
+                    color: #2aebcb;
+
+                    span {
+                        color: #fff;
+                    }
+
+                    + p {
+                        padding-top: 0;
+                        font-weight: bold;
+                        color: #bdcdd1;
+                        font-size: 8px;
+                    }
+                }
+            }
+        }
+    }
+
+    .tweet {
+        margin-bottom: 20px;
+        padding-left: 34px;
+        background: url(../img/tweet.png)no-repeat;
+
+        p {
+            font-weight: bold;
+
+            a {
+                font-weight: bold;
+                color: #2aebcb;
+            }
+
+            + span {
+                color: #b2b2b2;
+                font-size: 12px;
+            }
+        }
+    }
+
+    h4 {
+        font-weight: bold;
+        font-size: 20px;
+    }
+
+    ul {
+        margin-top: 36px;
+        padding-left: 21px;
+
+        li {
+            padding: 5px 0;
+            color: #2aebcb;
+
+            a {
+                font-weight: bold;
+                display: block;
+                font-family: 'Titillium';
+                font-size: 13px;
+                color: #b2b2b2;
+
+                &:hover {
+                    padding-left: 4px;
+                    color: #fff;
+                }
+            }
+        }
+    }
+}
 @media (max-width:767px) {
-  .subscribe {
-    img{
-      margin-left: 0;
+    .subscribe {
+        img {
+            margin-left: 0;
+        }
+
+        form {
+            input {
+                width: 70%;
+            }
+
+            button {
+                width: 30%;
+            }
+        }
     }
-    form{
-      input{
-        width: 70%;
-      }
-      button{
-        width: 30%;
-      }
-    }
-  }
+
     .products {
         .products-bar {
             h3 {
