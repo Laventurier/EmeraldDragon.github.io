@@ -425,7 +425,56 @@ body {
       margin-right: 6px;
       background: #535d5f url(../img/left.png) no-repeat 10px 9px; }
 
+.subscribe {
+  background: #10fabf;
+  background: -moz-linear-gradient(left, #10fabf 0%, #03d2d2 100%);
+  background: -webkit-gradient(left top, right top, color-stop(0%, #10fabf), color-stop(100%, #03d2d2));
+  background: -webkit-linear-gradient(left, #10fabf 0%, #03d2d2 100%);
+  background: -o-linear-gradient(left, #10fabf 0%, #03d2d2 100%);
+  background: -ms-linear-gradient(left, #10fabf 0%, #03d2d2 100%);
+  background: linear-gradient(to right, #10fabf 0%, #03d2d2 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr=  '#10fabf', endColorstr='#03d2d2', GradientType=1 );
+  padding: 35px 0; }
+  .subscribe img {
+    margin-left: 125px;
+    float: left; }
+  .subscribe form {
+    margin-top: 17px; }
+    .subscribe form input {
+      border-top-left-radius: 5px;
+      border-bottom-left-radius: 5px;
+      width: 334px;
+      float: left;
+      height: 42px;
+      padding-left: 18px;
+      border: 1px solid #efefef; }
+    .subscribe form button {
+      background: #2b373a;
+      font-weight: bold;
+      color: #fff;
+      font-size: 14px;
+      border-top-right-radius: 5px;
+      border-bottom-right-radius: 5px;
+      float: left;
+      border: none;
+      height: 42px;
+      width: 140px; }
+  .subscribe .text {
+    color: #fff;
+    overflow: hidden;
+    padding-left: 15px; }
+    .subscribe .text h3 {
+      font-weight: bold;
+      margin-top: 15px; }
+    .subscribe .text span {
+      font-size: 13px;
+      font-weight: bold; }
+
 @media (max-width: 1199px) {
+  .subscribe img {
+    margin-left: 50px; }
+  .subscribe form button {
+    width: 120px; }
   .main-header .container .search-box {
     width: 100%; }
   .navigation ul li a {
@@ -439,6 +488,12 @@ body {
     margin-left: -40px; } }
 
 @media (min-width: 768px) and (max-width: 991px) {
+  .subscribe img {
+    margin-left: 0; }
+  .subscribe form input {
+    width: 75%; }
+  .subscribe form button {
+    width: 25%; }
   .main-header .container .search-box form {
     width: 100%; }
     .main-header .container .search-box form input {
@@ -459,6 +514,12 @@ body {
       width: 100%; } }
 
 @media (max-width: 767px) {
+  .subscribe img {
+    margin-left: 0; }
+  .subscribe form input {
+    width: 70%; }
+  .subscribe form button {
+    width: 30%; }
   .products .products-bar h3 {
     font-size: 16px; }
   .selling {

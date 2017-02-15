@@ -520,77 +520,154 @@ body {
         }
     }
 }
-.products{
-  padding: 60px 0 90px;
-  .products-bar{
-    height: 63px;
-    position: relative;
-    border:1px solid #ebebeb;
-    .arrow-group{
-      float: right;
-      margin-top:16px;
-      margin-right: 16px;
-      button{
-        border: none;
-        border-radius: 5px;
+
+.products {
+    padding: 60px 0 90px;
+
+    .products-bar {
+        height: 63px;
+        position: relative;
+        border: 1px solid #ebebeb;
+
+        .arrow-group {
+            float: right;
+            margin-top: 16px;
+            margin-right: 16px;
+
+            button {
+                border: none;
+                border-radius: 5px;
+                float: left;
+                height: 30px;
+                width: 30px;
+                background: #00d7b3 url(../img/ri.png)no-repeat 12px 9px;
+
+                &:first-child {
+                    margin-right: 6px;
+                    background: #00d7b3 url(../img/left.png)no-repeat 10px 9px;
+                }
+            }
+        }
+
+        h3 {
+            display: inline-block;
+            margin: 0;
+            line-height: 63px;
+            font-weight: bold;
+            padding-left: 23px;
+        }
+
+        &::after {
+            content: '';
+            display: block;
+            height: 63px;
+            top: -1px;
+            left: -1px;
+            width: 6px;
+            background-color: #00d7b3;
+            position: absolute;
+        }
+    }
+
+    .blue {
+        &::after {
+            background-color: #1396e1;
+        }
+
+        .arrow-group {
+            button {
+                background: #1396e1 url(../img/ri.png)no-repeat 12px 9px;
+
+                &:first-child {
+                    margin-right: 6px;
+                    background: #1396e1 url(../img/left.png)no-repeat 10px 9px;
+                }
+            }
+        }
+    }
+
+    .grey {
+        &::after {
+            background-color: #535d5f;
+        }
+
+        .arrow-group {
+            button {
+                background: #535d5f url(../img/ri.png)no-repeat 12px 9px;
+
+                &:first-child {
+                    margin-right: 6px;
+                    background: #535d5f url(../img/left.png)no-repeat 10px 9px;
+                }
+            }
+        }
+    }
+}
+
+.subscribe {
+    background: rgba(16,250,191,1);
+    background: -moz-linear-gradient(left, rgba(16,250,191,1) 0%, rgba(3,210,210,1) 100%);
+    background: -webkit-gradient(left top, right top, color-stop(0%, rgba(16,250,191,1)), color-stop(100%, rgba(3,210,210,1)));
+    background: -webkit-linear-gradient(left, rgba(16,250,191,1) 0%, rgba(3,210,210,1) 100%);
+    background: -o-linear-gradient(left, rgba(16,250,191,1) 0%, rgba(3,210,210,1) 100%);
+    background: -ms-linear-gradient(left, rgba(16,250,191,1) 0%, rgba(3,210,210,1) 100%);
+    background: linear-gradient(to right, rgba(16,250,191,1) 0%, rgba(3,210,210,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr=  '#10fabf', endColorstr='#03d2d2', GradientType=1 );
+    padding: 35px 0;
+
+    img {
+      margin-left: 125px;
         float: left;
-        height: 30px;
-        width: 30px;
-        background: #00d7b3 url(../img/ri.png)no-repeat 12px 9px;
-        &:first-child{
-          margin-right: 6px;
-          background: #00d7b3 url(../img/left.png)no-repeat 10px 9px;
-        }
+    }
+    form{
+      margin-top:17px;
+      input{
+        border-top-left-radius: 5px;
+        border-bottom-left-radius: 5px;
+        width: 334px;
+        float: left;
+        height: 42px;
+        padding-left: 18px;
+        border: 1px solid #efefef;
       }
-    }
-    h3{
-      display: inline-block;
-      margin: 0;
-      line-height: 63px;
-      font-weight: bold;
-      padding-left: 23px;
-    }
-    &::after{
-      content: '';
-      display: block;
-      height: 63px;
-      top:-1px;
-      left: -1px;
-      width: 6px;
-      background-color: #00d7b3;
-      position: absolute;
-    }
-  }
-  .blue{
-    &::after{
-      background-color: #1396e1;
-    }
-    .arrow-group{
       button{
-        background:#1396e1 url(../img/ri.png)no-repeat 12px 9px;
-        &:first-child{
-          margin-right: 6px;
-          background:#1396e1 url(../img/left.png)no-repeat 10px 9px;
-        }
+        background: #2b373a;
+        font-weight: bold;
+        color:#fff;
+        font-size: 14px;
+        border-top-right-radius: 5px;
+        border-bottom-right-radius: 5px;
+        float: left;
+        border:none;
+        height: 42px;
+        width:140px;
       }
     }
-  }
-  .grey{
-    &::after{
-      background-color: #535d5f;
-    }
-    .arrow-group{
-      button{
-        background: #535d5f url(../img/ri.png)no-repeat 12px 9px;
-        &:first-child{
-          margin-right: 6px;
-          background:#535d5f url(../img/left.png)no-repeat 10px 9px;
+    .text {
+        color: #fff;
+        overflow: hidden;
+        padding-left: 15px;
+        h3 {
+            font-weight: bold;
+            margin-top: 15px;
         }
-      }
+        span{
+          font-size: 13px;
+          font-weight: bold;
+        }
     }
-  }
 }
 @media (max-width:1199px) {
+  .subscribe {
+    img{
+      margin-left: 50px;
+    }
+    form{
+      button{
+        width: 120px;
+      }
+    }
+  }
     .main-header {
         .container {
             .search-box {
@@ -625,6 +702,19 @@ body {
     }
 }
 @media (min-width:768px) and (max-width:991px) {
+  .subscribe {
+    img{
+      margin-left: 0;
+    }
+    form{
+      input{
+        width: 75%;
+      }
+      button{
+        width: 25%;
+      }
+    }
+  }
     .main-header {
         .container {
             .search-box {
@@ -670,13 +760,27 @@ body {
     }
 }
 @media (max-width:767px) {
-  .products{
-    .products-bar{
-      h3{
-      font-size: 16px;
+  .subscribe {
+    img{
+      margin-left: 0;
+    }
+    form{
+      input{
+        width: 70%;
+      }
+      button{
+        width: 30%;
       }
     }
   }
+    .products {
+        .products-bar {
+            h3 {
+                font-size: 16px;
+            }
+        }
+    }
+
     .selling {
         text-align: center;
 
