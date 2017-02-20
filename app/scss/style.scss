@@ -1303,4 +1303,16 @@ body {
     [class*='col-lg-'] {
         padding: 0;
     }
+    .products{
+        [class*='col-lg-'] {
+            padding: 0 15px;
+        }
+        .item-wrapper{
+          .item-info{
+            h5{
+              font-size: 15px;
+            }
+          }
+        }
+    }
 }

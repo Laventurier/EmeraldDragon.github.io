@@ -860,7 +860,7 @@ body {
     margin-right: auto;
     margin-left: auto;
     display: block;
-    width: 320px;
+    width: 319px;
     float: none; }
     .navigation form input {
       width: 100%; } }
@@ -875,4 +875,8 @@ body {
 
 @media (min-width: 1200px) {
   [class*='col-lg-'] {
-    padding: 0; } }
+    padding: 0; }
+  .products [class*='col-lg-'] {
+    padding: 0 15px; }
+  .products .item-wrapper .item-info h5 {
+    font-size: 15px; } }
