@@ -1018,9 +1018,9 @@ body {
   .products [class*='col-lg-'] {
     padding: 0 15px; }
   .products .item-wrapper {
-    height: 335px; }
+    height: 340px; }
     .products .item-wrapper .item-info h5 {
-      font-size: 15px; }
+      font-size: 14px; }
     .products .item-wrapper .item-info .item-seller span {
       font-size: 14px;
       padding-top: 3px; }
