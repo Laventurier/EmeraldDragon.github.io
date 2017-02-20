@@ -2,7 +2,43 @@
     font-family: 'Titillium';
     src: url("../fonts/TitilliumWeb-Regular.ttf");
 }
-
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+     -moz-border-radius: $radius;
+      -ms-border-radius: $radius;
+          border-radius: $radius;
+}
+@mixin border-top-left-radius($radius) {
+  -webkit-border-top-left-radius: $radius;
+     -moz-border-top-left-radius: $radius;
+      -ms-border-top-left-radius: $radius;
+          border-top-left-radius: $radius;
+}
+@mixin border-top-right-radius($radius) {
+  -webkit-border-top-right-radius: $radius;
+     -moz-border-top-right-radius: $radius;
+      -ms-border-top-right-radius: $radius;
+          border-top-right-radius: $radius;
+}
+@mixin border-bottom-right-radius($radius) {
+  -webkit-border-bottom-right-radius: $radius;
+     -moz-border-bottom-right-radius: $radius;
+      -ms-border-bottom-right-radius: $radius;
+          border-bottom-right-radius: $radius;
+}
+@mixin border-bottom-left-radius($radius) {
+  -webkit-border-bottom-left-radius: $radius;
+     -moz-border-bottom-left-radius: $radius;
+      -ms-border-bottom-left-radius: $radius;
+          border-bottom-left-radius: $radius;
+}
+@mixin transform($transforms) {
+	   -moz-transform: $transforms;
+	     -o-transform: $transforms;
+	    -ms-transform: $transforms;
+	-webkit-transform: $transforms;
+          transform: $transforms;
+}
 a:hover,
 a:visited {
     text-decoration: none !important;
@@ -60,7 +96,7 @@ body {
         }
 
         button {
-            border-radius: 5px;
+            @include border-radius(5px);
             border: none;
             width: 78px;
             height: 24px;
@@ -107,7 +143,7 @@ body {
                 }
 
                 .info {
-                    border-radius: 5px;
+                    @include border-radius(5px);
                     text-align: center;
                     top: -6px;
                     left: -8px;
@@ -167,7 +203,7 @@ body {
             background: #fff;
             width: 54px;
             height: 54px;
-            border-radius: 50%;
+            @include border-radius(50%);
             background: rgba(16,250,191,1);
             background: -moz-linear-gradient(left, rgba(16,250,191,1) 0%, rgba(3,210,210,1) 100%);
             background: -webkit-gradient(left top, right top, color-stop(0%, rgba(16,250,191,1)), color-stop(100%, rgba(3,210,210,1)));
@@ -180,12 +216,12 @@ body {
             img {
                 position: absolute;
                 z-index: 3;
-                transform: translateX(-50%) translateY(-50%);
+                @include transform(translateX(-50%) translateY(-50%));
                 top: 50%;
                 left: 50%;
                 height: 40px;
                 width: 40px;
-                border-radius: 50%;
+                @include border-radius(50%);
             }
 
             &::after {
@@ -193,7 +229,7 @@ body {
                 top: 0;
                 left: 0;
                 content: '';
-                transform: translateX(-50%) translateY(-50%);
+                @include transform(translateX(-50%) translateY(-50%));
                 top: 50%;
                 left: 50%;
                 position: absolute;
@@ -201,7 +237,7 @@ body {
                 background: #2b373a;
                 height: 50px;
                 width: 50px;
-                border-radius: 50%;
+                @include border-radius(50%);
             }
         }
     }
@@ -219,7 +255,7 @@ body {
             height: 40px;
             width: 320px;
             border: 1px solid #ebebeb;
-            border-radius: 30px;
+            @include border-radius(30px);
             padding-left: 19px;
 
             &::-webkit-input-placeholder {
@@ -233,7 +269,7 @@ body {
             top: 0;
             left: 280px;
             border: none;
-            border-radius: 50%;
+            @include border-radius(50%);
             height: 40px;
             width: 40px;
             background: #535d5f url(../img/loop.png)no-repeat 12px 12px;
@@ -332,8 +368,8 @@ body {
                 input {
                     width: 450px;
                     float: left;
-                    border-top-left-radius: 5px;
-                    border-bottom-left-radius: 5px;
+                    @include border-top-left-radius(5px);
+                    @include border-bottom-left-radius(5px);
                     padding-left: 19px;
                     height: 50px;
                     border: 1px solid #efefef;
@@ -342,8 +378,8 @@ body {
                 select {
                     width: 230px;
                     float: left;
-                    border-bottom-right-radius: 5px;
-                    border-top-right-radius: 5px;
+                    @include border-bottom-right-radius(5px);
+                    @include border-top-right-radius(5px);
                     color: #777777;
                     background: #fff;
                     padding-left: 15px;
@@ -356,7 +392,7 @@ body {
                     float: left;
                     font-weight: bold;
                     border: none;
-                    border-radius: 5px;
+                    @include border-radius(5px);
                     width: 170px;
                     height: 50px;
                     color: #fff;
@@ -380,7 +416,7 @@ body {
             width: 176px;
             font-weight: bold;
             height: 50px;
-            border-radius: 5px;
+            @include border-radius(5px);
             border: none;
             font-size: 16px;
             color: #fff;
@@ -458,16 +494,16 @@ body {
         position: relative;
         height: 140px;
         width: 140px;
-        transform: translateX(-50%);
+        @include transform(translateX(-50%)) ;
         left: 50%;
 
         img {
             height: 110px;
             width: 110px;
-            border-radius: 50%;
+            @include border-radius(50%);
             position: absolute;
             z-index: 3;
-            transform: translateX(-50%) translateY(-50%);
+            @include transform(translateX(-50%) translateY(-50%));
             left: 50%;
             top: 50%;
 
@@ -488,13 +524,13 @@ body {
 
         .white {
             visibility: hidden;
-            border-radius: 50%;
+            @include border-radius(50%);
             position: absolute;
             background: #fff;
             height: 121px;
             width: 121px;
             z-index: 2;
-            transform: translateX(-50%) translateY(-50%);
+            @include transform(translateX(-50%) translateY(-50%));
             left: 50%;
             top: 50%;
         }
@@ -503,7 +539,7 @@ body {
             opacity: 0;
             transition: 1s opacity;
             visibility: hidden;
-            border-radius: 50%;
+            @include border-radius(50%);
             z-index: 1;
             height: 140px;
             width: 140px;
@@ -556,7 +592,7 @@ body {
             width: 26px;
             height: 26px;
             background: #2b373a;
-            border-radius: 50%;
+            @include border-radius(50%);
           }
           .item-seller-score{
             position: relative;
@@ -576,7 +612,7 @@ body {
               margin-top:10px;
               top:100%;
               left:-18px;
-              border-radius: 5px;
+              @include border-radius(5px);
               line-height: 26px;
               text-align: center;
               width: 111px;
@@ -588,7 +624,7 @@ body {
               color:#fff;
               &::before{
                 bottom:100%;
-                transform: translateX(-50%);
+                @include transform(translateX(-50%));
                 left: 50%;
                 position: absolute;
                 content: '';
@@ -642,14 +678,14 @@ body {
           ul{
             visibility: visible;
             opacity: 1;
-            transform: scale(1);
+            @include transform(scale(1));
             transition:  0.45s opacity linear, 0.5s transform ease;
           }
         }
         ul{
           visibility: hidden;
           opacity: 0;
-          transform: scale(1.5);
+          @include transform(scale(1.5));
           text-align: center;
           margin: 0;
           padding: 0;
@@ -692,7 +728,7 @@ body {
 
             button {
                 border: none;
-                border-radius: 5px;
+                @include border-radius(5px);
                 float: left;
                 height: 30px;
                 width: 30px;
@@ -780,8 +816,8 @@ body {
         margin-top: 17px;
 
         input {
-            border-top-left-radius: 5px;
-            border-bottom-left-radius: 5px;
+            @include border-top-left-radius(5px);
+            @include border-bottom-left-radius(5px);
             width: 334px;
             float: left;
             height: 42px;
@@ -794,8 +830,8 @@ body {
             font-weight: bold;
             color: #fff;
             font-size: 14px;
-            border-top-right-radius: 5px;
-            border-bottom-right-radius: 5px;
+            @include border-top-right-radius(5px);
+            @include border-bottom-right-radius(5px);
             float: left;
             border: none;
             height: 42px;
@@ -1094,7 +1130,7 @@ body {
 
                     input {
                         float: none;
-                        border-radius: 5px;
+                        @include border-radius(5px);
                         padding-left: 19px;
                         width: 80%;
                     }
@@ -1104,7 +1140,7 @@ body {
                         color: #777777;
                         background: #fff;
                         margin-top: 15px;
-                        border-radius: 5px;
+                        @include border-radius(5px);
                         padding-left: 15px;
                         width: 80%;
                     }
@@ -1308,6 +1344,7 @@ body {
             padding: 0 15px;
         }
         .item-wrapper{
+          height: 335px;
           .item-info{
             h5{
               font-size: 15px;
