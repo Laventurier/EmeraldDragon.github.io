@@ -377,6 +377,136 @@ body {
 
 .products {
   padding: 60px 0 90px; }
+  .products .row {
+    padding-bottom: 60px; }
+  .products .item-wrapper {
+    margin-top: 25px;
+    position: relative;
+    border: 1px solid #ebebeb;
+    padding: 4px 4px 0 4px;
+    min-height: 335px; }
+    .products .item-wrapper .item-info {
+      padding: 22px 8px 10px; }
+      .products .item-wrapper .item-info h5 {
+        margin: 0;
+        margin-bottom: 10px;
+        font-size: 16px;
+        color: #2b373a;
+        font-weight: bold;
+        font-family: "Titillium";
+        line-height: 22px; }
+      .products .item-wrapper .item-info p {
+        color: #777;
+        font-size: 12px;
+        margin-bottom: 0; }
+      .products .item-wrapper .item-info .item-seller {
+        padding-top: 12px; }
+        .products .item-wrapper .item-info .item-seller .item-seller-photo {
+          overflow: hidden;
+          float: left;
+          width: 26px;
+          height: 26px;
+          background: #2b373a;
+          border-radius: 50%; }
+        .products .item-wrapper .item-info .item-seller .item-seller-score {
+          position: relative;
+          float: right;
+          display: inline-block; }
+          .products .item-wrapper .item-info .item-seller .item-seller-score:hover {
+            cursor: pointer; }
+            .products .item-wrapper .item-info .item-seller .item-seller-score:hover span {
+              visibility: visible;
+              opacity: 1;
+              transition: 0.75s opacity ease; }
+          .products .item-wrapper .item-info .item-seller .item-seller-score span {
+            visibility: hidden;
+            opacity: 0;
+            margin-top: 10px;
+            top: 100%;
+            left: -18px;
+            border-radius: 5px;
+            line-height: 26px;
+            text-align: center;
+            width: 111px;
+            padding: 0;
+            z-index: 92;
+            font-size: 10px;
+            position: absolute;
+            background: #000;
+            color: #fff; }
+            .products .item-wrapper .item-info .item-seller .item-seller-score span::before {
+              bottom: 100%;
+              transform: translateX(-50%);
+              left: 50%;
+              position: absolute;
+              content: '';
+              height: 0;
+              width: 0;
+              border-style: solid;
+              border-color: transparent transparent #000 transparent;
+              border-width: 8px;
+              border-bottom-width: 10px; }
+        .products .item-wrapper .item-info .item-seller span {
+          font-family: "Titillium";
+          font-weight: bold;
+          display: inline-block;
+          padding-left: 3px;
+          padding-top: 2px; }
+      .products .item-wrapper .item-info .item-descr {
+        padding-top: 12px;
+        padding-bottom: 15px;
+        border-bottom: 1px solid #ebebeb; }
+        .products .item-wrapper .item-info .item-descr span {
+          font-weight: bold;
+          font-family: "Titillium"; }
+        .products .item-wrapper .item-info .item-descr .item-name {
+          padding-top: 3px;
+          font-size: 14px;
+          color: #06b99b;
+          float: left; }
+        .products .item-wrapper .item-info .item-descr .item-price {
+          font-size: 20px;
+          float: right; }
+          .products .item-wrapper .item-info .item-descr .item-price span {
+            font-size: 12px; }
+    .products .item-wrapper .item-img {
+      overflow: hidden;
+      position: relative;
+      background: #00d7b3;
+      min-height: 150px; }
+      .products .item-wrapper .item-img:hover {
+        cursor: pointer; }
+        .products .item-wrapper .item-img:hover ul {
+          visibility: visible;
+          opacity: 1;
+          transform: scale(1);
+          transition: 0.45s opacity linear, 0.5s transform ease; }
+      .products .item-wrapper .item-img ul {
+        visibility: hidden;
+        opacity: 0;
+        transform: scale(1.5);
+        text-align: center;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        background: #153a36;
+        top: 0; }
+        .products .item-wrapper .item-img ul li {
+          padding-top: 43px;
+          display: inline-block; }
+          .products .item-wrapper .item-img ul li:first-child {
+            margin-right: 37px; }
+          .products .item-wrapper .item-img ul li a {
+            display: block;
+            color: #fff;
+            font-size: 13px;
+            font-weight: bold;
+            font-family: "Titillium"; }
+            .products .item-wrapper .item-img ul li a img {
+              margin-bottom: 10px; }
   .products .products-bar {
     height: 63px;
     position: relative;
@@ -486,32 +616,6 @@ body {
   .navigation form button {
     left: 100%;
     margin-left: -40px; } }
-
-@media (min-width: 768px) and (max-width: 991px) {
-  .subscribe img {
-    margin-left: 0; }
-  .subscribe form input {
-    width: 75%; }
-  .subscribe form button {
-    width: 25%; }
-  .main-header .container .search-box form {
-    width: 100%; }
-    .main-header .container .search-box form input {
-      width: 45%; }
-    .main-header .container .search-box form select {
-      width: 24%; }
-    .main-header .container .search-box form button {
-      margin-left: 25px; }
-  .navigation ul li a {
-    padding: 0 20px; }
-  .navigation form {
-    margin-right: auto;
-    margin-left: auto;
-    display: block;
-    width: 320px;
-    float: none; }
-    .navigation form input {
-      width: 100%; } }
 
 .copyright {
   background: #21282a; }
@@ -734,6 +838,40 @@ body {
       float: right; }
       .header .user-data span.glyphicon:hover {
         cursor: pointer; } }
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .subscribe img {
+    margin-left: 0; }
+  .subscribe form input {
+    width: 75%; }
+  .subscribe form button {
+    width: 25%; }
+  .main-header .container .search-box form {
+    width: 100%; }
+    .main-header .container .search-box form input {
+      width: 45%; }
+    .main-header .container .search-box form select {
+      width: 24%; }
+    .main-header .container .search-box form button {
+      margin-left: 25px; }
+  .navigation ul li a {
+    padding: 0 20px; }
+  .navigation form {
+    margin-right: auto;
+    margin-left: auto;
+    display: block;
+    width: 320px;
+    float: none; }
+    .navigation form input {
+      width: 100%; } }
+
+@media (min-width: 992px) {
+  .products .item-wrapper {
+    height: 370px; }
+    .products .item-wrapper .item-info h5 {
+      font-size: 12px; }
+    .products .item-wrapper .item-info .item-seller .item-seller-score {
+      display: block; } }
 
 @media (min-width: 1200px) {
   [class*='col-lg-'] {
